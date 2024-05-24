@@ -105,7 +105,7 @@ def get_data_base(filename="gen2DVs.csv", quiete=True):
 
         print(f"Elapsed Time: {timedelta(seconds=tf-t0)}")
 
-    df.to_csv(filename)
+    df.to_csv(filename, index=False)
 
     return df
 
