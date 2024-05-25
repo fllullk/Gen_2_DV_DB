@@ -84,9 +84,9 @@ def get_data_base(filename="gen2DVs.csv", quiete=True):
     
     df["Y"] = np.clip(df["Special"], 0, 3)
 
-    df["HPb_BP"] = (5 * df["X"] + df["Y"]) // 2 + 31
+    df["HP_BP"] = (5 * df["X"] + df["Y"]) // 2 + 31
 
-    df["HPb_Type"] = ("0b" + 
+    df["HP_Type"] = ("0b" + 
                      (df["Attackb"].str[-2:] + df["Defenseb"].str[-2:])
                      ).apply(lambda x: hpb_type_dict[int(x, 2)])
 
